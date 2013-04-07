@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>確認ボックスを表示する１</title>
+<title>確認ボックスを表示する2</title>
 <link rel="stylesheet" href="../_shared/css/reset.css">
 <link rel="stylesheet" href="../_shared/css/base.css">
 <!--[if lt IE 9]>
@@ -14,7 +14,7 @@
 
 <header>
 <div class="inner">
-<h1>確認ボックスを表示する１</h1>
+<h1>確認ボックスを表示する2</h1>
 </div>
 <!--header--></header>
 <div id="contents">
@@ -28,11 +28,17 @@
 <!--footer--></footer>
 <!--ここにスクリプトを入力します-->
 <script type="text/javascript">
-if (confirm('1月は別名「睦月」。同じように6月は「文月」である。（◯：OK／x:キャンセル）')){
-	alert('残念「水無月」でした');
+var answer = confirm ('送信しますか？');
+
+/*ここでしばらく待つ*/
+window.alert('しばらくお待ちください');
+
+if (answer){
+	alert('送信しました');
 }else{
-	alert('正解！');
+	alert('キャンセルしました');
 }
+
 </script>
 
 </body>
