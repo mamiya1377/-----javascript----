@@ -29,13 +29,11 @@
 <!--ここにスクリプトを入力します-->
 <select name="age">
 <script type="text/javascript">
-document.write('<option value="10">10歳</option>');
-document.write('<option value="11">11歳</option>');
-document.write('<option value="12">12歳</option>');
-document.write('<option value="13">13歳</option>');
-document.write('<option value="14">14歳</option>');
-document.write('<option value="15">15歳</option>');
-
+var i = 10;
+while (i <= 70){
+	document.write('<option vakue="' + i + '">' + i + '歳</option>');
+	i = i + 1;  //i += 1; や　i++; とも書き換えできる
+}
 </script>
 </select>
 </body>
