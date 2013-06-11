@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>メニューの内容をリストに表示する１　配列</title>
+<title>メニューの内容をリストに表示する2　連想配列</title>
 <link href="../js_samples/_shared/css/reset.css" rel="stylesheet" type="text/css">
 <link href="../js_samples/_shared/css/base.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
@@ -13,22 +13,26 @@
 
 <header>
 <div class="inner">
-<h1><span>Array</span>メニューの内容をリストに表示する</h1>
+<h1>メニューの内容をリストに表示する2　連想配列</h1>
 </div>
 <!-- header --></header>
 
 <div id="contents">
 <div class="inner">
 
-<h2>メインメニュー</h2>
-<ul class="list">
 <script type="text/javascript">
-var menus = new Array('ホーム','会社概要','製品情報','お問い合わせ');
-for (var i=0; i<menus.length; i++){
-	document.write('<li><a href="/' + menus[i] + '">' + menus[i] + '</a></li>');
+var menus = {
+	'home.html':'ホーム',
+	'company.html':'会社情報',
+	'product.html':'製品情報',
+	'contact.html':'お問い合わせ'
+}
+
+for (var m in menus){
+	document.write('<li><a href="/' + m + '" title="' + menus[m] + 'に移動します">' + menus[m] + '</a></li>');
 }
 </script>
-</ul>
+
 
 <!-- inner --></div>
 <!-- contents --></div>
