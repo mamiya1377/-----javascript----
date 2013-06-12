@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>メニューの内容をリストに表示する2　連想配列</title>
+<title>ボタンをくりっくしたら、確認ボタンを表示する１　イベント</title>
 <link href="../js_samples/_shared/css/reset.css" rel="stylesheet" type="text/css">
 <link href="../js_samples/_shared/css/base.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
@@ -13,26 +13,14 @@
 
 <header>
 <div class="inner">
-<h1>メニューの内容をリストに表示する2　連想配列</h1>
+<h1>ボタンをくりっくしたら、確認ボタンを表示する１　イベント</h1>
 </div>
 <!-- header --></header>
 
 <div id="contents">
 <div class="inner">
-
-<script type="text/javascript">
-var menus = {
-	'home.html':'ホーム',
-	'company.html':'会社情報',
-	'product.html':'製品情報',
-	'contact.html':'お問い合わせ'
-}
-
-for (var m in menus){
-	document.write('<li><a href="/' + m + '" title="' + menus[m] + 'に移動します">' + menus[m] + '</a></li>');
-}
-</script>
-
+<p>ウィンドウを閉じるには、「閉じる」ボタンをクリックしてください。</p>
+<p class="btn"><input type="button" value="閉じる" onclick="if(confirm('閉じてよろしいですか？')){window.close(); }"></p>
 
 <!-- inner --></div>
 <!-- contents --></div>
