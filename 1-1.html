@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ボタンをくりっくしたら、確認ボタンを表示する１　イベント</title>
+<title>ボタンをくりっくしたら、確認ボタンを表示する２　ID属性</title>
 <link href="../js_samples/_shared/css/reset.css" rel="stylesheet" type="text/css">
 <link href="../js_samples/_shared/css/base.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
@@ -13,14 +13,24 @@
 
 <header>
 <div class="inner">
-<h1>ボタンをくりっくしたら、確認ボタンを表示する１　イベント</h1>
+<h1>ボタンをくりっくしたら、確認ボタンを表示する２　ID属性</h1>
 </div>
 <!-- header --></header>
 
 <div id="contents">
 <div class="inner">
 <p>ウィンドウを閉じるには、「閉じる」ボタンをクリックしてください。</p>
-<p class="btn"><input type="button" value="閉じる" onclick="if(confirm('閉じてよろしいですか？')){window.close(); }"></p>
+<p class="btn"><input id="btnClose" type="button" value="閉じる"></p>
+...
+<script type="text/javascript">
+document.getElementById('btnClose').onclick = function() {
+	if(confirm('閉じてよろしいですか？')){
+		window.close();
+	} else {
+		alert('閉じるのを中止しました');
+	}
+}
+</script>
 
 <!-- inner --></div>
 <!-- contents --></div>
