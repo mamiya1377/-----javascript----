@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>１−１３選ばれた年齢によって、割引率を変える</title>
+<title>１−１４数字に３桁ごとにカンマを入れるファンクションを作る</title>
 <link href="../js_samples/_shared/css/reset.css" rel="stylesheet" type="text/css">
 <link href="../js_samples/_shared/css/base.css" rel="stylesheet" type="text/css">
 <!--[if lt IE 9]>
@@ -12,39 +12,22 @@
 <body>
 <header>
   <div class="inner">
-    <h1>選ばれた年齢によって、割引率を変える</h1>
+    <h1>数字に３桁ごとにカンマを入れるファンクションを作る</h1>
   </div>
   <!-- header --></header>
 <div id="contents">
   <div class="inner">
-    <p>年齢</p>
-    <select id="age" name="age">
-      <option value="">お選びください</option>
-      <option value="10">10歳以下</option>
-      <option value="30">11-30歳</option>
-      <option value="50">31-50歳</option>
-      <option value="51">51歳以上</option>
-    </select>
+   
     <script type="text/javascript">
-document.getElementById('age').onchange = function(){
-	var age = document.getElementById('age').value;
-
-switch (age){
-	case'10':
-	alert('10歳以下の方は、半額です');
-	break;
-	case '30':
-    alert('11-31歳の方は割引はありません');
-	break;
-	case '50':
-	alert('31-50歳の方は、10%引きです');
-	break;
-	case '51':
-	alert('51歳以上の方は、20%引きです');
-	break;
+	function numberFromat(saurce){
+var s = new String(saurce);
+var ret = '';
+for (var i=s.length-3; i>0; i-=3){
+	ret = ',' + s.substr(i,3) + ret;
 }
-	
-}
+ret = s.substr(0,i+3) + ret;
+document.write('合計金額は'+ret+'円です');
+	}
 </script> 
     
     <!-- inner --></div>
